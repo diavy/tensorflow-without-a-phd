@@ -114,7 +114,7 @@ def do_training(i):
     sess.run(train_step, feed_dict={X:batch_X, Y_:batch_Y, step:i, pkeep:0.75}) ### drop out at training stage
 
 with sess:
-    iterations = 2000
+    iterations = 10000
     for i in range(iterations):
         do_training(i)
 

@@ -91,7 +91,7 @@ Y = tf.nn.softmax(Ylogits)
 #cross_entropy = - tf.reduce_sum(Y_ * tf.log(Y))
 cross_entropy = tf.nn.softmax_cross_entropy_with_logits_v2(logits=Ylogits, labels=Y_)
 cross_entropy = tf.reduce_mean(cross_entropy) * 100  # make it comparable with test dataset with 10000 samples
-#cross_entropy = tf.reduce_sum(cross_entropy) / 10  # this should be equal to above
+#cross_entropy = tf.reduce_sum(cross_entropy)  # this should be equal to above
 
 # optimizer set up: GradientDecent(mini-batch), learning rate is 0.003
 # lr = 0.003
